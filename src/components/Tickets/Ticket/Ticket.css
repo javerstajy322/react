@@ -1,0 +1,16 @@
+.Sheet {
+  margin: 0;
+  padding: 0;
+}
+
+.TicketWrapper {
+  margin: 0 auto;
+  max-width: 700px;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid black;
+}
+
+.TicketInfoRow {
+  display: flex;
+}
