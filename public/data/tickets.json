@@ -1,6 +1,6 @@
 {
   "tickets": [{
-    "id": 1,
+    "clickCounter": 0,
     "origin": "VVO",
     "origin_name": "Владивосток",
     "destination": "TLV",
@@ -13,7 +13,7 @@
     "stops": 3,
     "price": 12400
   }, {
-    "id": 2,
+    "clickCounter": 1,
     "origin": "VVO",
     "origin_name": "Владивосток",
     "destination": "TLV",
@@ -26,7 +26,7 @@
     "stops": 1,
     "price": 13100
   }, {
-    "id": 3,
+    "clickCounter": 0,
     "origin": "VVO",
     "origin_name": "Владивосток",
     "destination": "TLV",
@@ -39,7 +39,7 @@
     "stops": 0,
     "price": 15300
   }, {
-    "id": 4,
+    "clickCounter": 0,
     "origin": "VVO",
     "origin_name": "Владивосток",
     "destination": "TLV",
@@ -52,7 +52,7 @@
     "stops": 2,
     "price": 11000
   }, {
-    "id": 5,
+    "clickCounter": 0,
     "origin": "VVO",
     "origin_name": "Владивосток",
     "destination": "TLV",
@@ -65,7 +65,7 @@
     "stops": 3,
     "price": 13400
   }, {
-    "id": 6,
+    "clickCounter": 0,
     "origin": "VVO",
     "origin_name": "Владивосток",
     "destination": "TLV",
@@ -78,7 +78,7 @@
     "stops": 3,
     "price": 12450
   }, {
-    "id": 7,
+    "clickCounter": 0,
     "origin": "VVO",
     "origin_name": "Владивосток",
     "destination": "TLV",
@@ -91,7 +91,7 @@
     "stops": 1,
     "price": 13600
   }, {
-    "id": 8,
+    "clickCounter": 0,
     "origin": "VVO",
     "origin_name": "Владивосток",
     "destination": "TLV",
@@ -104,7 +104,7 @@
     "stops": 0,
     "price": 14250
   }, {
-    "id": 9,
+    "clickCounter": 0,
     "origin": "VVO",
     "origin_name": "Владивосток",
     "destination": "TLV",
@@ -117,7 +117,7 @@
     "stops": 1,
     "price": 16700
   }, {
-    "id": 10,
+    "clickCounter": 0,
     "origin": "VVO",
     "origin_name": "Владивосток",
     "destination": "TLV",

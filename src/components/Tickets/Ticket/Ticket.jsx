@@ -5,7 +5,8 @@ const ticket = props => (
   <div className="TicketWrapper" key>
     <div className="ActionRow">
       <img src="" alt="" />
-      <button>Купить за {props.price}</button>
+      <button onClick={props.click}>Купить за {props.price}</button>
+      <div>click {props.clickCounter}</div>
     </div>
     <div className="TicketInfoRow">
       <div className="From">

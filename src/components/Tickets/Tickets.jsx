@@ -2,25 +2,54 @@ import React from "react";
 import "./Tickets.css";
 
 import Ticket from "./Ticket/Ticket";
-import ticketsDate from "../../tickets.json";
 
-class tickets extends React.Component {
+class Tickets extends React.Component {
+  state = {
+    tickets: []
+  };
+
+  clickHandler = id => {
+    const { tickets } = this.state;
+
+    tickets.forEach((el, index) => {
+      if (index === id) {
+        el.clickCounter = el.clickCounter + 1;
+      }
+    });
+
+    this.setState({
+      tickets: tickets
+    });
+  };
+
+  componentWillMount() {
+    fetch("/data/tickets.json")
+      .then(response => response.json())
+      .then(data => {
+        console.log("data", data); // обратите внимание на этот вывод
+        this.setState({ tickets: data.tickets });
+      })
+      .catch(error => console.log("error", error)); // этот выполнится в случае ошибки
+  }
+
   render() {
-    const ticket = ticketsDate.tickets;
+    const { tickets, click } = this.state;
 
-    const ticketsObj = Object.keys(ticketsDate.tickets).map((item, index) => (
+    const ticketsObj = tickets.map((item, index) => (
       <Ticket
+        click={() => this.clickHandler(index)}
+        clickCounter={item.clickCounter}
         key={index}
-        price={ticket[item].price}
-        departure_time={ticket[item].departure_time}
-        origin={ticket[item].origin}
-        origin_name={ticket[item].origin_name}
-        departure_date={ticket[item].departure_date}
-        stops={ticket[item].stops}
-        arrival_time={ticket[item].arrival_time}
-        destination_name={ticket[item].destination_name}
-        destination={ticket[item].destination}
-        arrival_date={ticket[item].arrival_date}
+        price={item.price}
+        departure_time={item.departure_time}
+        origin={item.origin}
+        origin_name={item.origin_name}
+        departure_date={item.departure_date}
+        stops={item.stops}
+        arrival_time={item.arrival_time}
+        destination_name={item.destination_name}
+        destination={item.destination}
+        arrival_date={item.arrival_date}
       />
     ));
 
@@ -28,4 +57,4 @@ class tickets extends React.Component {
   }
 }
 
-export default tickets;
+export default Tickets;
