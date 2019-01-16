@@ -4,6 +4,7 @@ class Controls extends Component {
 
 
   render() {
+    console.log(`This props three`, this.props.three)
     return (
       <div>
         <form action="">
@@ -12,7 +13,18 @@ class Controls extends Component {
             name="all"
             id=""
             checked={this.props.all}
-            onChange={this.props.updateAll}
+            // Каждый новый чекбокс отправляет свой тип
+            // В идеале тебе нужно сделать компонент для чекбокса и избавиться от такой кучи кода, ну и проще будет поддерживать
+            onChange={() => this.props.update(-1)}
+          />{" "}
+          all
+          <br />
+          <input
+            type="checkbox"
+            name="zero"
+            id=""
+            checked={this.props.zero}
+            onChange={() => this.props.update(0)}
           />{" "}
           0
           <br />
@@ -21,7 +33,7 @@ class Controls extends Component {
             name="one"
             id=""
             checked={this.props.one}
-            onChange={this.props.updateOne}
+            onChange={() => this.props.update(1)}
           />{" "}
           1
           <br />
@@ -30,7 +42,7 @@ class Controls extends Component {
             name="two"
             id=""
             checked={this.props.two}
-            onChange={this.props.updateTwo}
+            onChange={() => this.props.update(2)}
           />{" "}
           2
           <br />
@@ -38,8 +50,9 @@ class Controls extends Component {
             type="checkbox"
             name="three"
             id=""
-            checked={this.props.Three}
-            onChange={this.props.updateThree}
+            // У тебя тут опечатка, three был с заглавной и чекбокс не работал
+            checked={this.props.three}
+            onChange={() => this.props.update(3)}
           />{" "}
           3
           <br />
