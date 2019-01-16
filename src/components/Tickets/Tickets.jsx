@@ -30,6 +30,7 @@ class Tickets extends React.Component {
         this.setState({ tickets: data.tickets });
       })
       .catch(error => console.log("error", error)); // этот выполнится в случае ошибки
+      
   }
 
   render() {
